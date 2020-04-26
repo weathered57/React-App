@@ -11,11 +11,11 @@ class CategoryList extends Component {
   selectedCategory = (category) => {
     this.props.actions.currentCategory(category);
   };
-  
+
   render() {
     return (
       <div>
-        <h3>Categories </h3>
+        <h4>Categories </h4>
         <ListGroup>
           {this.props.categories.map((category) => (
             <ListGroupItem
@@ -26,8 +26,7 @@ class CategoryList extends Component {
               {category.categoryName}
             </ListGroupItem>
           ))}
-        </ListGroup>
-        <h5>Secili Kategori : {this.props.currentCategory.categoryName}</h5>
+        </ListGroup>    
       </div>
     );
   }
