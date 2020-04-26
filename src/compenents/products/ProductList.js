@@ -6,7 +6,7 @@ import { Badge, Table } from "reactstrap";
 
 class ProductList extends Component {
   componentDidMount() {
-    this.props.actions.getProducts();
+    this.props.actions.getProducts(this.props.currentCategory.categoryId);
   }
 
   render() {
@@ -28,7 +28,7 @@ class ProductList extends Component {
           </thead>
           <tbody>
             {this.props.products.map((product) => (
-              <tr>
+              <tr key={product.productId}>
                 <th scope="row">{product.productId}</th>
                 <td>{product.productName}</td>
                 <td>{product.unitPrice}</td>
