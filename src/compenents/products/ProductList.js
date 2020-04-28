@@ -12,7 +12,7 @@ class ProductList extends Component {
   }
   addToCart=(product)=>{
      this.props.actions.addToCart({quantity:1,product});
-     alertify.success(product.produtName + "sepete eklendi")
+     alertify.success( "sepete eklendi")
   }
 
   render() {
@@ -58,8 +58,7 @@ class ProductList extends Component {
 function mapStateToProps(state) {
   return {
     currentCategory: state.changeCategoryReducer,
-    products: state.productListReducer,
-    addToCart:state.cartReducer
+    products: state.productListReducer
   };
 }
 
@@ -67,7 +66,7 @@ function mapDispatchToProps(dispatch) {
   return {
     actions: {
       getProducts: bindActionCreators(productActions.getProducts, dispatch),
-      addToCart: bindActionCreators(cartAction.addToCart, dispatch),
+      addToCart: bindActionCreators(cartAction.addToCart, dispatch)
     },
   };
 }
