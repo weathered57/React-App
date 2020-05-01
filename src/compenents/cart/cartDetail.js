@@ -36,7 +36,7 @@ class CartDetail extends Component {
                 <th scope="row">{cartItem.product.productId}</th>
                 <td>{cartItem.product.productName}</td>
                 <td>{cartItem.product.unitPrice}</td>
-                <td>{cartItem.product.quantity}</td>
+                <td>{cartItem.quantity}</td>
                 <td>
                   <Button
                     size="sm"
