@@ -9,7 +9,7 @@ import {
   NavLink,
   NavbarText,
 } from "reactstrap";
-import CartSummary from "../cart/cartSummary";
+import CartSummary from "../cart/CartSummary";
 
 export default class Navi extends Component {
   render() {

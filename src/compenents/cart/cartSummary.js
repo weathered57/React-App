@@ -12,6 +12,7 @@ import { bindActionCreators } from "redux";
 import * as cartActions from "../../redux/actions/cartAction";
 import { connect } from "react-redux";
 import alertify from 'alertifyjs'
+import {Link} from 'react-router-dom'
 
 class CartSummary extends Component {
   renderEmpty() {
@@ -53,7 +54,7 @@ class CartSummary extends Component {
           ))}
 
           <DropdownItem divider />
-          <DropdownItem>Sepete Git</DropdownItem>
+          <DropdownItem><Link to={"/cart"}>Sepete Git</Link></DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
     );
